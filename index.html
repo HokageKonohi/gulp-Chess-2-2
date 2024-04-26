@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHESS </title>
+  <link rel="icon" href="./imges/favicon.ico" type="imges/ico">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="screen ">
+    <h1 class="chess__h1">CHESS</h1>
+    <a href="#" class="start" id="start">Начать игру</a>
+  </div>
+  </div>
+  <div class="item__imgs">
+    <img class="item__img" src="./imges/585.jpg" alt="">
+  </div>
+  <header class="header">
+  </header>
+  <div class="wrapper">
+    <main class="main">
+      <div class="container">
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span>
+              <h2>Выбор фигуры</h2>
+            </div>
+            <div class="modal-body">
+              <button class="btn btn__w1" onclick="kll()"><img src="./imges/wQueen.png" alt=""></button>
+              <button class="btn btn__w2"><img src="./imges/wRook.png" alt=""></button>
+              <button class="btn btn__w3"><img src="./imges/wBishop.png" alt=""></button>
+              <button class="btn btn__w4 "><img src="./imges/wKnight.png" alt=""></button>
+            </div>
+            <div class="modal-body">
+              <button class="btn btn__b1 "><img src="./imges/bQueen.png" alt=""></button>
+              <button class="btn btn__b2 "><img src="./imges/bRook.png" alt=""></button>
+              <button class="btn btn__b3 "><img src="./imges/bBishop.png" alt=""></button>
+              <button class="btn btn__b4 "><img src="./imges/bKnight.png" alt=""></button>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+        <div class="grid-container ">
+          <div class="grid-item">
+            <div class="timers">
+              <div id="timer1" class="timer">
+                <h2 data-tooltip="Побитых фигур у черных" class="player__1">Игрок 1</h2>
+                <label data-tooltip="Осталось времени">Время:</label>
+                <span class="minutes">00</span>
+                <span class="seconds">00</span>
+              </div>
+              <div id="timer2" class="timer">
+                <h2 data-tooltip="Побитых фигур у белых " class="player__2 ">Игрок 2</h2>
+                <label data-tooltip="Осталось времени">Время:</label>
+                <span class="minutes">00</span>
+                <span class="seconds">00</span>
+              </div>
+            </div>
+            <div class="btn__transform-item timers">
+              <button class="btn__transform" id="myBlock">Развернуть</button>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div>
+              <div class=" text-center">
+                <h1 class="h3 mt-3 mb-1">Шахматы</h1>
+                <audio id="players" autoplay="autoplay"></audio>
+                <div>
+                  <button data-tooltip="Воспроизвести музыку" onclick="document.getElementById('players').play()"
+                    type="button" class="btn btn-success btn-circle"><i
+                      class="material-icons">play_circle_outline</i></button>
+                  <button data-tooltip="Пауза" onclick="document.getElementById('players').pause()" type="button"
+                    class="btn btn-warning btn-circle"><i class="material-icons">pause</i></button>
+                  <button data-tooltip="Дать громче" onclick="document.getElementById('players').volume+=0.1"
+                    type="button" class="btn btn-info btn-circle"><i class="material-icons">volume_up</i></button>
+                  <button data-tooltip="Дать тише" onclick="document.getElementById('players').volume-=0.1"
+                    type="button" class="btn btn-light btn-circle"><i class="material-icons">volume_down</i></button>
+                  <button class="btns start" onclick="play()">
+                    <span data-tooltip="Переключивать время" class="fas fa-play fa-fw fa-3x">&#11137;</span>
+                  </button>
+                </div>
+                <div class="chess__gemes ">
+                  <img class="chess__img" src="./imges/700-nw.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="beaten__figures-item">
+              <div class="beaten__figures">
+                <h2 data-tooltip="Побитых фигур у черных" class="player__1" id="Player_1">Player 1</h2>
+              </div>
+              <div class="beaten__figures">
+                <h2 data-tooltip="Побитых фигур у белых " class="player__2 " id="Player_2">Player 2</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+    </footer>
+  </div>
+  <script src="./js/main.min.js"></script>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+</body>
+
+</html>
